@@ -12,5 +12,5 @@
  * @return {number}
  */
 var addDigits = function(num) {
-    return (num - 1) % 9 + 1;
+  return (num - 1) % 9 + 1;
 };

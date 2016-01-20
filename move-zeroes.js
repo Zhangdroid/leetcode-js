@@ -11,13 +11,13 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var moveZeroes = function(nums) {
-	var j = nums.length;
-	for (var i = 0; i < j; i++) {
-		if (nums[i] === 0) {
-			nums.splice(i, 1);
-			nums.push(0);
-			i--;
-			j--;
-		}
-	}
+  var j = nums.length;
+  for (var i = 0; i < j; i++) {
+    if (nums[i] === 0) {
+      nums.splice(i, 1);
+      nums.push(0);
+      i--;
+      j--;
+    }
+  }
 };
