@@ -11,6 +11,8 @@
  * @param {number[]} nums
  * @return {number[]}
  */
+
+//use division
 var productExceptSelf = function(nums) {
   var arr = [];
   var product = 1;
@@ -40,4 +42,21 @@ var productExceptSelf = function(nums) {
     }
   }
   return arr;
+};
+
+//without division, from https://leetcode.com/discuss/46104/simple-java-solution-in-o-n-without-extra-space
+var productExceptSelf = function(nums) {
+  var size = nums.length;
+  var left = 1,
+    right = 1;
+  var output = [1];
+  for (var i = 0; i < size - 1; i++) {
+    left *= nums[i];
+    output[i + 1] = left;
+  }
+  for (var i = 0; i < size - 1; i++) {
+    right *= nums[size - i - 1];
+    output[size - i - 2] *= right;
+  }
+  return output;
 };
